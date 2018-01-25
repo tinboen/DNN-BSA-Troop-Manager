@@ -13,8 +13,8 @@ IF NOT EXISTS (SELECT * FROM sys.objects WHERE [object_id] = OBJECT_ID(N'{databa
 	BEGIN
 		CREATE TABLE {databaseOwner}{objectQualifier}BSA_LDHV_LOOKUP
 		(
-			[PORTAL_ID]			int NOT NULL,
-			[LOOKUP_ID]			int NOT NULL IDENTITY(1, 1),
+			[PORTAL_ID]		int NOT NULL,
+			[LOOKUP_ID]		int NOT NULL IDENTITY(1, 1),
 			[COLUMN_NAME]		nvarchar(30) NOT NULL,
 			[FIELD_NAME]		nvarchar(15) NOT NULL,
 			[FIELD_VALUE]		nvarchar(50) NOT NULL,
@@ -32,9 +32,9 @@ IF NOT EXISTS (SELECT * FROM sys.objects WHERE [object_id] = OBJECT_ID(N'{databa
 	BEGIN
 		CREATE TABLE {databaseOwner}{objectQualifier}BSA_LDHV_TROOP
 		(
-			[PORTAL_ID]			int NOT NULL,
-			[TROOP_ID]			int NOT NULL IDENTITY(1, 1),
-			[TROOP_NM]			nvarchar(50) NOT NULL,
+			[PORTAL_ID]		int NOT NULL,
+			[TROOP_ID]		int NOT NULL IDENTITY(1, 1),
+			[TROOP_NM]		nvarchar(50) NOT NULL,
 			[TROOP_STAT_CD]		nvarchar(15) NULL,
 			[CREATED_DT]		smalldatetime NOT NULL,
 			[CREATED_USERID]	int NOT NULL,
@@ -49,10 +49,10 @@ IF NOT EXISTS (SELECT * FROM sys.objects WHERE [object_id] = OBJECT_ID(N'{databa
 	BEGIN
 		CREATE TABLE {databaseOwner}{objectQualifier}BSA_LDHV_UNIT
 		(
-			[PORTAL_ID]			int NOT NULL,
-			[UNIT_ID]			int NOT NULL IDENTITY(1, 1),
-			[TROOP_ID]			int NULL,
-			[UNIT_NM]			nvarchar(50) NOT NULL,
+			[PORTAL_ID]		int NOT NULL,
+			[UNIT_ID]		int NOT NULL IDENTITY(1, 1),
+			[TROOP_ID]		int NULL,
+			[UNIT_NM]		nvarchar(50) NOT NULL,
 			[UNIT_STAT_CD]		nvarchar(15) NULL,
 			[CREATED_DT]		smalldatetime NOT NULL,
 			[CREATED_USERID]	int NOT NULL,
@@ -67,10 +67,10 @@ IF NOT EXISTS (SELECT * FROM sys.objects WHERE [object_id] = OBJECT_ID(N'{databa
 	BEGIN
 		CREATE TABLE {databaseOwner}{objectQualifier}BSA_LDHV_PATROL
 		(
-			[PORTAL_ID]			int NOT NULL,
-			[PATROL_ID]			int NOT NULL IDENTITY(1, 1),
-			[UNIT_ID]			int NULL,
-			[PATROL_NM]			nvarchar(50) NOT NULL,
+			[PORTAL_ID]		int NOT NULL,
+			[PATROL_ID]		int NOT NULL IDENTITY(1, 1),
+			[UNIT_ID]		int NULL,
+			[PATROL_NM]		nvarchar(50) NOT NULL,
 			[PATROL_STAT_CD]	nvarchar(15) NULL,
 			[CREATED_DT]		smalldatetime NOT NULL,
 			[CREATED_USERID]	int NOT NULL,
